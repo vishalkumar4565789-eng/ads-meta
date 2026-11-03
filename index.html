@@ -125,14 +125,14 @@
 
         /* Managed By Section */
         .managed-by {
-            margin-top: 15px;
+            margin-top: 5px;
             background-color: #0d131a;
             border: 1px solid #1c2633;
             border-radius: 12px;
             padding: 12px 25px;
             font-size: 14px;
             color: #a0aab2;
-            width: 90%;
+            width: 100%; /* Sudhar kiya gaya hai */
         }
 
         .managed-by span {
@@ -146,8 +146,7 @@
     <div class="container">
         <!-- Profile Image -->
         <div class="profile-container">
-            <!-- Apni Image Ka Path/Link Yahan Lagayein -->
-            <img src="https://i.ibb.co/DHhTNjSz/Q-pp3-Cv9e9-Gpcy1-DZo-At-Bs-ZMz-J-1-Ou-KFr-YJHYBT-YLD-D8-S4-P5h-BPa6-9r8l9-FA-OLa-TZe1-Cn-Bx-JUqu-SGNOO5-RNa4.jpg" alt="Surya X Trades">
+            <img src="https://i.ibb.co/DHhTNjSz/Q-pp3-Cv9e9-Gpcy1-DZo-At-Bs-ZMz-J-1-Ou-KFr-YJHYBT-YLD-D8-S4-P5h-BPa6-9r8l9-FA-OLa-TZe1-Cn-Bx-JUqu-SGNOO5-RNa4.jpg" alt="Trade With Vikas">
         </div>
 
         <!-- Channel Title -->
@@ -155,8 +154,8 @@
             Trade With Vikas
         </div>
 
-        <!-- Button -->
-        <a href="https://t.me/+o0mJLPaDDB1iMjll" class="btn-join">
+        <!-- Button with Click Event Tracking -->
+        <a href="https://t.me/+o0mJLPaDDB1iMjll" class="btn-join" onclick="fbq('track', 'Lead');">
             JOIN NOW - FREE SIGNALS
         </a>
 
@@ -194,6 +193,7 @@
             Managed by <span>Ai ads agency</span>
         </div>
     </div>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
