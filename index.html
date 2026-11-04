@@ -1,199 +1,232 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trade With Vikas</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade With Vikas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-        body {
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 15px;
-        }
+    body {
+      background-color: #050505;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 15px;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 420px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
+    /* Main Neon Card Container with Soft Yellow Glow */
+    .card-container {
+      width: 100%;
+      max-width: 400px;
+      background-color: #0c0b08;
+      border: 1.5px solid #ffcc00;
+      border-radius: 28px;
+      padding: 30px 20px 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.15);
+    }
 
-        /* Profile Image Wrapper */
-        .profile-container {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            overflow: hidden;
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-            margin-bottom: 5px;
-        }
+    /* Profile Image with Golden Glow */
+    .profile-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+    }
 
-        .profile-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ffdd44;
+      box-shadow: 0 0 22px rgba(255, 221, 68, 0.5);
+    }
 
-        /* Title Box */
-        .title-box {
-            width: 100%;
-            border: 1.5px solid #fff;
-            border-radius: 8px;
-            padding: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            font-family: 'Georgia', serif;
-            letter-spacing: 0.5px;
-        }
+    /* Title */
+    .title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      color: #ffea75;
+    }
 
-        /* Call To Action Button */
-        .btn-join {
-            width: 100%;
-            padding: 14px 10px;
-            background: linear-gradient(180deg, #1b75bc 0%, #004080 100%);
-            border: 1.5px solid #fff;
-            border-radius: 4px;
-            color: #fff;
-            font-size: 17px;
-            font-weight: bold;
-            text-decoration: none;
-            display: block;
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.4);
-            letter-spacing: 0.5px;
-            cursor: pointer;
-        }
+    /* List Items */
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 25px;
+      text-align: left;
+    }
 
-        /* Click Here Pointer */
-        .click-here {
-            font-size: 26px;
-            font-weight: 800;
-            color: #38b6ff;
-            margin: 2px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 10px;
+      font-size: 14px;
+      color: #f3f4f6;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-        /* Features Main Card */
-        .features-card {
-            width: 100%;
-            background-color: #080808;
-            border: 1px solid #222;
-            border-radius: 16px;
-            padding: 20px 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
-        }
+    .feature-item:last-child {
+      border-bottom: none;
+    }
 
-        .feature-item {
-            font-size: 16px;
-            font-weight: 600;
-        }
+    .icon {
+      font-size: 18px;
+    }
 
-        .stars {
-            color: #ff9900;
-            font-size: 16px;
-        }
+    /* Subtitle Text */
+    .subtext {
+      font-size: 13px;
+      color: #d1d5db;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
 
-        /* Footer Tag Box */
-        .footer-box {
-            width: 100%;
-            border: 1.5px solid #fff;
-            border-radius: 6px;
-            padding: 8px;
-            font-size: 13px;
-            font-weight: bold;
-            line-height: 1.4;
-        }
+    /* Gradient Join Button (Gold & Amber Theme) */
+    .btn-telegram {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(90deg, #ffbb00 0%, #ff6600 100%);
+      color: #000000;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+      border-radius: 30px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(255, 187, 0, 0.4);
+      margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
 
-        /* Managed By Section */
-        .managed-by {
-            margin-top: 5px;
-            background-color: #0d131a;
-            border: 1px solid #1c2633;
-            border-radius: 12px;
-            padding: 12px 25px;
-            font-size: 14px;
-            color: #a0aab2;
-            width: 100%;
-        }
+    .btn-telegram:active {
+      transform: scale(0.98);
+    }
 
-        .managed-by span {
-            color: #38b6ff;
-            font-weight: bold;
-        }
-    </style>
+    /* Hindi Quote */
+    .quote-text {
+      font-size: 14px;
+      color: #e5e7eb;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    /* Agency Badge */
+    .agency-badge {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 20px;
+    }
+
+    .agency-badge span {
+      color: #ffcc00;
+      font-weight: 700;
+    }
+
+    /* Disclaimer Links & Text */
+    .footer-links {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .footer-links a {
+      color: #6b7280;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .disclaimer {
+      font-size: 10px;
+      color: #4b5563;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Profile Image -->
-        <div class="profile-container">
-            <img src="https://i.ibb.co/DHhTNjSz/Q-pp3-Cv9e9-Gpcy1-DZo-At-Bs-ZMz-J-1-Ou-KFr-YJHYBT-YLD-D8-S4-P5h-BPa6-9r8l9-FA-OLa-TZe1-Cn-Bx-JUqu-SGNOO5-RNa4.jpg" alt="Trade With Vikas">
-        </div>
-
-        <!-- Channel Title -->
-        <div class="title-box">
-            Trade With Vikas
-        </div>
-
-        <!-- Button with Safe Tracking Script -->
-        <a href="javascript:void(0);" onclick="trackAndRedirect('https://t.me/+o0mJLPaDDB1iMjll')" class="btn-join">
-            JOIN NOW - FREE SIGNALS
-        </a>
-
-        <!-- Click Here Text -->
-        <div class="click-here">
-            Click Here 👆
-        </div>
-
-        <!-- Content Card -->
-        <div class="features-card">
-            <div class="feature-item">
-                India No.1 Telegram Channel <span class="stars">★★★★★</span>
-            </div>
-            <div class="feature-item">
-                8 Years Experience Of Market 🚀🚀
-            </div>
-            <div class="feature-item">
-                Risk Management ✅
-            </div>
-            <div class="feature-item">
-                Accuracy More Then 90%
-            </div>
-            <div class="feature-item">
-                Every Day Nifty50 Volume Research Levels 🎯
-            </div>
-        </div>
-
-        <!-- Sub Footer Box -->
-        <div class="footer-box">
-            🗿 No Paid Promotions • No Fake Calls • 100% Transparent Performance
-        </div>
-
-        <!-- Managed By Badge -->
-        <div class="managed-by">
-            Managed by <span>Ai ads agency</span>
-        </div>
+  <div class="card-container">
+    
+    <!-- Profile Image -->
+    <div class="profile-wrapper">
+      <img src="https://i.ibb.co/zH0v1k2h/Q-pp3-Cv9e9-Gpcy1-DZo-At-Bs-ZMz-J-1-Ou-KFr-YJHYBT-YLD-D8-S4-P5h-BPa6-9r8l9-FA-OLa-TZe1-Cn-Bx-JUqu-SGNOO5-RNa4.jpg" alt="Trade With Gautam Jha" class="profile-img">
     </div>
+
+    <!-- Title -->
+    <h1 class="title">Trade With Vikas</h1>
+
+    <!-- Features List -->
+    <div class="feature-list">
+      <div class="feature-item">
+        <span class="icon">🌐</span>
+        <span>Learning & Educational Sessions</span>
+      </div>
+      <div class="feature-item">
+        <span class="icon">📊</span>
+        <span>Market Concepts & Awareness</span>
+      </div>
+      <div class="feature-item">
+        <span class="icon">💎</span>
+        <span>Chart Reading Concepts</span>
+      </div>
+      <div class="feature-item">
+        <span class="icon">💻</span>
+        <span>Educational Case Discussions</span>
+      </div>
+    </div>
+
+    <!-- Subtitle -->
+    <p class="subtext">
+      Join our learning community and grow your knowledge
+    </p>
+
+    <!-- Join Button -->
+    <a href="https://t.me/+o0mJLPaDDB1iMjll" class="btn-telegram">
+      JOIN TELEGRAM
+    </a>
+
+    <!-- Hindi Quote -->
+    <p class="quote-text">
+      नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।
+    </p>
+
+    <!-- Agency Credit -->
+    <div class="agency-badge">
+      This Channel Advertise By <span>GROWFI AGENCY</span>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="https://t.me/+jViKIQmWTLFmNjNl" target="_blank">Terms | Privacy | Disclaimer</a>
+    </div>
+
+    <!-- Facebook Disclaimer -->
+    <div class="disclaimer">
+      This site is not part of Facebook™ or endorsed by Facebook™
+    </div>
+
+  </div>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -209,11 +242,6 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1520588749948537&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2971963826500422&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </body>
